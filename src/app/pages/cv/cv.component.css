@@ -1,0 +1,128 @@
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa al menos toda la altura de la pantalla */
+}
+
+.site-content {
+  flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+:root {
+        --bg: #121212;
+        --card: #1e1e1e;
+        --text: #e0e0e0;
+        --violet: #bb86fc;
+        --teal: #03dac6;
+        --muted: #9e9e9e;
+        --radius: 12px;
+        --shadow: 0 6px 18px rgba(3, 218, 198, 0.08);
+      }
+
+      body.cv {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      body.cv h1 {
+        color: aliceblue;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 20px var(--violet);
+        border-right: 10px solid var(--violet);
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        max-width: 500px;
+        animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        0%,
+        50% {
+          border-color: var(--violet);
+        }
+        50%,
+        100% {
+          border-color: transparent;
+        }
+      }
+
+      .pdf-container {
+        width: 80%;
+        height: 80vh;
+        max-width: 900px;
+        background: var(--card);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        border-radius: var(--radius);
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+      }
+
+      .pdf-container embed {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .botones {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+ 
+      .btn-descargar,
+      .btn-regresar {
+        background: linear-gradient(90deg, var(--violet), var(--teal));
+        color:  aliceblue;
+        padding: 0.75rem 2rem;
+        border-radius: var(--radius);
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: var(--shadow);
+        transition: background-color 0.3s ease;
+        user-select: none;
+        background-color: #8a2be2;
+        border-radius: 15px;
+      }
+
+      .btn-descargar:hover,
+      .btn-regresar:hover {
+        background: linear-gradient(90deg, var(--teal), var(--violet));
+        box-shadow: 0 8px 24px #8a2be2;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 15px;
+      }
+
+      @media (max-width: 600px) {
+        .pdf-container {
+          width: 100%;
+          height: 60vh;
+        }
+        body.cv h1 {
+          font-size: 1.8rem;
+        }
+      }

@@ -1,0 +1,25 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* --- Estilos para la barra de navegación --- */
+
+/* Por defecto (Móvil): Ocultamos el menú de escritorio */
+.desktop-menu {
+  display: none;
+}
+
+/* En pantallas de 768px o más (Tablets y Escritorio)... */
+@media (min-width: 768px) {
+  /* Mostramos el menú de escritorio */
+  .desktop-menu {
+    display: block;
+  }
+
+  /* Y ocultamos el menú de hamburguesa */
+  .mobile-menu {
+    display: none;
+  }
+
+  
+}

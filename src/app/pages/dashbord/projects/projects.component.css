@@ -1,0 +1,118 @@
+.example-card {
+  max-width: auto;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+/* Contenedor principal de la sección de proyectos */
+#id {
+  padding: 30px;
+}
+
+/* La cuadrícula que contiene las tarjetas de proyectos */
+.projects-grid {
+  display: grid;
+  /* 1. Define explícitamente 3 columnas de igual tamaño */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* Espacio entre las tarjetas */
+}
+
+/* Estilos para cada tarjeta de proyecto */
+.project-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(187, 134, 252, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;height: auto;
+
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px var(--acento1);
+}
+
+/* 2. Media Query para pantallas más pequeñas (tablets y móviles) */
+@media (max-width: 992px) {
+  .projects-grid {
+    /* Cambia a 2 columnas en pantallas medianas */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    /* Cambia a 1 columna en pantallas pequeñas */
+    grid-template-columns: 1fr;
+  }
+}
+
+.titlecard {
+    color: aliceblue;
+}
+     h1, h3, p {color: aliceblue;
+        text-align: center;
+
+}
+
+h2 { 
+    padding: 20px;
+    text-align: left;
+    color: aliceblue;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 10px rgba(187, 134, 252, 0.4);
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+
+  /* 2. Aplica el contorno (grosor y color) */
+  -webkit-text-stroke: 1px white;
+  text-shadow: 10px rgba(187, 134, 252, 0.4); /* Versión estándar (aún no muy soportada) */
+
+  /* Atributos adicionales para que se vea bien */
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.img-card {
+    text-align: center;
+    max-width: 80%;
+    max-height: 20%;
+    display: block;      /* 1. Haz que se comporte como un bloque */
+  margin-left: auto;   /* 3. Centra horizontalmente */
+  margin-right: auto;
+  border-radius: 10px;
+
+}
+
+ 
+a {
+  /* Apariencia del botón */
+  margin: auto;
+  display: inline-block; /* Permite definir padding y margin */
+  padding: 12px 24px; /* Espaciado interno (vertical y horizontal) */
+  background-color: #8A2BE2; /* Morado base (BlueViolet) */
+  color: white; /* Color del texto */
+  border-radius: 8px; /* Bordes redondeados */
+  
+  /* Estilos del texto */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  text-align: center; /* Centra el texto si el botón tiene un ancho fijo */
+  font-family: Arial, sans-serif; /* Tipo de letra */
+  font-weight: bold; /* Texto en negrita */
+  
+  /* Efectos y transiciones */
+  border: none; /* Quita cualquier borde por defecto */
+  cursor: pointer; /* Cambia el cursor a una mano */
+  transition: background-color 0.3s ease; /* Anima el cambio de color suavemente */
+}
+
+a:hover {
+  /* Estado al pasar el ratón por encima */
+  background-color: #6A1B9A; /* Morado más oscuro */
+}

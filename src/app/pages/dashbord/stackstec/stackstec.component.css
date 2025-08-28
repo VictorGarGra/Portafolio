@@ -1,0 +1,103 @@
+  :root {
+    --fondo: #121212;
+    --texto: #e0e0e0;
+    --acento1: #bb86fc; /* Morado para el hover */
+    --acento2: #03dac6; /* Turquesa principal */
+    --acento3: #cf6679;
+  }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    padding: 20px;
+    text-align: left;
+    color: aliceblue;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 10px rgba(187, 134, 252, 0.4);
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .tech-item {
+    background-color: #8a2be2;
+    border: 1px solid var(--acento2);
+    box-shadow: 0 0 15px -2px var(--acento2);
+    color: var(--acento2);
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .tech-icon {
+    filter: brightness(0) invert(1);
+    width: 24px;
+    height: 24px;
+    transition: transform 0.6s ease;
+  }
+
+  .tech-item:hover {
+    background-color: var(--acento1);
+    color: var(--fondo);
+    border-color: var(--acento1);
+    box-shadow: 0 0 20px var(--acento1);
+    transform: translateY(-5px);
+  }
+
+  .tech-item:hover .tech-icon {
+    transform: rotate(360deg);
+  }
+
+  h3 {
+    color: aliceblue;
+    margin: 0;
+  }
+
+  /* Media queries para mejorar responsividad */
+  @media (max-width: 900px) {
+    h2 {
+      font-size: 36px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .stack-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+    h2 {
+      font-size: 28px;
+      padding: 15px 10px;
+    }
+    .tech-item {
+      padding: 0.4rem 0.8rem;
+      border-radius: 30px;
+      font-size: 14px;
+    }
+    .tech-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .stack-grid {
+      grid-template-columns: 1fr;
+    }
+    .tech-item {
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }

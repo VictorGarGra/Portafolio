@@ -1,0 +1,77 @@
+<section id="contacto" style="animation-name: fadeUp; animation-delay: 1.2s">
+  <h2>Contactarme</h2>
+  <div class="contact-links">
+    <a href="" aria-label="Teléfono">
+      <svg
+        class="contact-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C9.94 21.5 2.5 14.06 2.5 5a1 1 0 011-1H7a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.93 2.8z"
+        />
+      </svg>
+      +52 5547799767
+    </a>
+  </div>
+  <div class="contact-links">
+    <a routerLink="/correo" aria-label="Correo electrónico">
+      <svg
+        class="contact-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M1.5 4.5h21v15h-21v-15zm19.5 1.5-9 7.5-9-7.5v12h18v-12zm-9 5.47L3.75 6.75h16.5L12 11.47z"
+        />
+      </svg>
+      {{ correoDelUsuario }}
+    </a>
+  </div>
+  <div class="contact-links">
+    <a
+      href="https://www.linkedin.com/in/victor-garcia-granados-50080a236/"
+      target="_blank"
+      rel="noopener"
+      aria-label="LinkedIn"
+    >
+      <svg
+        class="contact-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6 1.1 6 0 4.88 0 3.5S1.1 1 2.48 1c1.38 0 2.5 1.12 2.5 2.5zM.12 8.5h4.72v15H.12v-15zM8.54 8.5h4.53v2.17h.06c.63-1.2 2.17-2.47 4.46-2.47 4.77 0 5.64 3.13 5.64 7.2v8.13h-4.8v-7.22c0-1.72-.03-3.93-2.4-3.93-2.41 0-2.78 1.88-2.78 3.82v7.33h-4.72v-15z"
+        />
+      </svg>
+      LinkedIn
+    </a>
+  </div>
+  <div class="contact-links">
+    <a
+      href="https://www.instagram.com/horus251000"
+      target="_blank"
+      rel="noopener"
+      aria-label="Instagram"
+    >
+      <svg
+        class="contact-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.12 2.12a1.12 1.12 0 110 2.25 1.12 1.12 0 010-2.25zm-4.37 1.38a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"
+        />
+      </svg>
+      Instagram
+    </a>
+  </div>
+</section>
+
+<section id="descargar-cv">
+  <h2>Ver mi CV</h2>
+  <div class="contact-links">
+    <a routerLink="/cv"> <mat-icon>visibility</mat-icon> Ver CV </a>
+  </div>
+</section>
+<router-outlet></router-outlet>

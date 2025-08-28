@@ -1,0 +1,13 @@
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa al menos toda la altura de la pantalla */
+}
+
+.site-content {
+  flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+.Principal{
+padding-right: 2%;
+  padding-left: 2%;
+}

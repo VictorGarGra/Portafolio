@@ -1,0 +1,119 @@
+.bienvenida {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: #E0E0E0;
+
+  /* Fondo con imagen completa */
+  background-image: url("../../../assets/back.jpg");
+  background-size: cover;      /* Que se ajuste al contenedor */
+  background-position: center; /* Centrado */
+  background-repeat: no-repeat;
+  position: relative;          /* Necesario para overlay */
+  z-index: 0;
+}
+
+/* Capa de transparencia encima del fondo */
+.bienvenida::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.6); /* negro con transparencia */
+  z-index: -1; /* queda debajo del contenido */
+}
+
+
+.bienvenida h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #BB86FC; /* acento violeta suave */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #BB86FC; /* cursor con acento violeta */
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    border-color: #BB86FC; /* cursor violeta */
+  }
+  50%,
+  100% {
+    border-color: transparent;
+  }
+}
+/* --- 1. Definición de la Animación Automática --- */
+@keyframes image-pulse-and-move {
+  /* Estado inicial de la imagen */
+  0% {
+    transform: rotate(30deg) scale(1) translate(0, 0); 
+    box-shadow: 0 8px 25px var(--teal);
+  }
+  /* Estado a la mitad de la animación para crear el "pulso" */
+  50% {
+    transform: rotate(35deg) scale(1.05) translate(10px, 12px); 
+    box-shadow: 0 15px 50px var(--violet);
+  }
+  /* La animación regresa al estado inicial para un bucle suave */
+  100% {
+    transform: rotate(30deg) scale(1) translate(0, 0); 
+    box-shadow: 0 8px 25px var(--teal);
+  }
+}
+
+/* --- 2. Estilos Base y Aplicación de la Animación a la Imagen --- */
+.bienvenida img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+
+  /* Asignamos la animación automática que definimos arriba */
+  /* Nombre | Duración | Curva | Repetición | Dirección */
+  animation: image-pulse-and-move 6s ease-in-out infinite alternate;
+  
+  /* Se mantiene la transición para que el efecto de hover sea suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- 3. Efecto de Hover Opcional --- */
+.bienvenida img:hover {
+  /* Transformación más exagerada que se activa con el cursor */
+  transform: scale(1.6) translate(50px, 60px); 
+  box-shadow: 0 15px 80px var(--violet);
+
+  /* Pausa la animación automática mientras el cursor está encima */
+  animation-play-state: paused;
+}
+:root {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #e0e0e0;
+  --violet: #bb86fc;
+  --teal: #03dac6;
+  --rose: #cf6679;
+  --muted: #9e9e9e;
+  --radius: 12px;
+}

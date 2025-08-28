@@ -1,0 +1,101 @@
+<app-header></app-header>
+<div class="container">
+  <header>
+    <h1>Contáctame</h1>
+    <p>
+      Envíame un correo directo a <strong>Garciavico251&#64;gmail.com</strong> o
+      usa el formulario.
+    </p>
+  </header>
+
+  <main>
+    <mat-card class="card">
+      <mat-card-content>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Tu nombre</mat-label>
+              <input
+                matInput
+                placeholder="Ej. Juan Pérez"
+                formControlName="name"
+                required
+              />
+              @if (contactForm.get('name')?.hasError('required')) {
+              <mat-error>El nombre es requerido.</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Tu correo</mat-label>
+              <input
+                matInput
+                type="email"
+                placeholder="tu@correo.com"
+                formControlName="email"
+                required
+              />
+              @if (contactForm.get('email')?.hasError('required')) {
+              <mat-error>El correo es requerido.</mat-error>
+              } @else if (contactForm.get('email')?.hasError('email')) {
+              <mat-error>Introduce un correo válido.</mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Asunto</mat-label>
+            <input
+              matInput
+              placeholder="Asunto del mensaje"
+              formControlName="subject"
+              required
+            />
+            @if (contactForm.get('subject')?.hasError('required')) {
+            <mat-error>El asunto es requerido.</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Mensaje</mat-label>
+            <textarea
+              matInput
+              placeholder="Escribe tu mensaje..."
+              formControlName="message"
+              required
+            ></textarea>
+            @if (contactForm.get('message')?.hasError('required')) {
+            <mat-error>El mensaje es requerido.</mat-error>
+            }
+          </mat-form-field>
+
+          <div class="actions">
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              [disabled]="contactForm.invalid"
+            >
+              Abrir correo
+              <mat-icon>email</mat-icon>
+            </button>
+
+            <button mat-stroked-button type="button" (click)="onClear()">
+              Limpiar
+            </button>
+
+            <a class="mailto-link" href="mailto:Garciavico251@gmail.com">
+              Enviar correo directo (sin formulario)
+            </a>
+          </div>
+
+          <p class="note">
+            Nota: Al pulsar "Abrir correo" se abrirá tu cliente de correo
+            (Outlook, Apple Mail, etc.) con el mensaje listo para enviar.
+          </p>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </main>
+</div>
+<app-footer></app-footer>
