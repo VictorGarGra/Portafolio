@@ -5,17 +5,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu'; // <-- ¡Este es importante!
 import { RouterModule, RouterOutlet } from '@angular/router';
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatMenuModule,
-    RouterModule,
-    RouterOutlet,
-  ],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+    selector: 'app-header',
+    imports: [
+        MatIconModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatMenuModule,
+        RouterModule,
+        RouterOutlet,
+    ],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.css'
 })
 export class HeaderComponent {}

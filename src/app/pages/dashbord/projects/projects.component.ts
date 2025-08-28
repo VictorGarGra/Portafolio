@@ -4,11 +4,10 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [MatCardModule, MatChipsModule, MatProgressBarModule],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-projects',
+    imports: [MatCardModule, MatChipsModule, MatProgressBarModule],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectsComponent {}

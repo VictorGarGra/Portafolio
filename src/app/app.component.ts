@@ -23,28 +23,27 @@ import { StackstecComponent } from './pages/dashbord/stackstec/stackstec.compone
 import { InicioComponent } from './pages/inicio/inicio.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-    /*  LayoutmainComponent,
-    HeaderComponent,
-    FooterComponent, */
-    ReactiveFormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    /* StackstecComponent,
-    ProjectsComponent,
-    ContactoComponent, */
-    MatGridListModule,
-    InicioComponent,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        MatIconModule,
+        MatButtonModule,
+        MatToolbarModule,
+        /*  LayoutmainComponent,
+        HeaderComponent,
+        FooterComponent, */
+        ReactiveFormsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        /* StackstecComponent,
+        ProjectsComponent,
+        ContactoComponent, */
+        MatGridListModule,
+        InicioComponent,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Portafolio';

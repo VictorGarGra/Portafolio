@@ -10,19 +10,18 @@ import { CvComponent } from '../../pages/cv/cv.component';
 import { RouterOutlet } from '@angular/router';
 import { IniciobienvenidaComponent } from '../../pages/dashbord/iniciobienvenida/iniciobienvenida.component';
 @Component({
-  selector: 'app-layoutmain',
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    FooterComponent,
-    ProjectsComponent,
-    StackstecComponent,
-    AcercadeComponent,
-    RedesComponent,
-    RouterOutlet,
-    IniciobienvenidaComponent,
-  ],
-  templateUrl: './layoutmain.component.html',
-  styleUrl: './layoutmain.component.css',
+    selector: 'app-layoutmain',
+    imports: [
+        HeaderComponent,
+        FooterComponent,
+        ProjectsComponent,
+        StackstecComponent,
+        AcercadeComponent,
+        RedesComponent,
+        RouterOutlet,
+        IniciobienvenidaComponent,
+    ],
+    templateUrl: './layoutmain.component.html',
+    styleUrl: './layoutmain.component.css'
 })
 export class LayoutmainComponent {}
