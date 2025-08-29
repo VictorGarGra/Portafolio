@@ -7,7 +7,6 @@ import { LayoutmainComponent } from './layout/layoutmain/layoutmain.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 // Importaciones para el formulario
 import { ReactiveFormsModule } from '@angular/forms';
@@ -23,27 +22,28 @@ import { StackstecComponent } from './pages/dashbord/stackstec/stackstec.compone
 import { InicioComponent } from './pages/inicio/inicio.component';
 
 @Component({
-    selector: 'app-root',
-    imports: [
-        RouterOutlet,
-        MatIconModule,
-        MatButtonModule,
-        MatToolbarModule,
-        /*  LayoutmainComponent,
+  selector: 'app-root',
+  imports: [
+    RouterOutlet,
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
+    /*  LayoutmainComponent,
         HeaderComponent,
         FooterComponent, */
-        ReactiveFormsModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        /* StackstecComponent,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    /* StackstecComponent,
         ProjectsComponent,
         ContactoComponent, */
-        MatGridListModule,
-        InicioComponent,
-    ],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css'
+    MatGridListModule,
+    /*     InicioComponent,
+     */
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'Portafolio';

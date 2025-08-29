@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter /* withAnchorScrolling */ } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { routes } from './app.routes';
 
@@ -15,7 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
+    provideRouter(routes /* , withAnchorScrolling() */),
     provideAnimationsAsync(),
     importProvidersFrom([
       MatCardModule,

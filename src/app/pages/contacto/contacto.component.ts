@@ -15,25 +15,25 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { HeaderComponent } from '../../layout/header/header.component';
 import { FooterComponent } from '../../layout/footer/footer.component';
+import { MenuComponent } from '../../layout/menu/menu.component';
 
 @Component({
-    selector: 'app-contacto', // Indica que es un componente autosuficiente
-    imports: [
-        // Aquí se declaran todas las dependencias del componente
-        CommonModule,
-        ReactiveFormsModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatIconModule,
-        HeaderComponent,
-        FooterComponent,
-    ],
-    templateUrl: './contacto.component.html',
-    styleUrls: ['./contacto.component.css']
+  selector: 'app-contacto', // Indica que es un componente autosuficiente
+  imports: [
+    // Aquí se declaran todas las dependencias del componente
+    CommonModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    FooterComponent,
+    MenuComponent,
+  ],
+  templateUrl: './contacto.component.html',
+  styleUrls: ['./contacto.component.css'],
 })
 export class ContactoComponent implements OnInit {
   // Definimos el FormGroup para nuestro formulario
