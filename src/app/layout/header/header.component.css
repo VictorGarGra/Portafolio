@@ -1,25 +1,140 @@
-.spacer {
-  flex: 1 1 auto;
+/* Variables de color para fácil modificación */
+:root {
+    --navbar-bg: #8a2be2; /* Tu color morado */
+    --navbar-text: #ffffff;
+    --link-hover: #5a1a96;
 }
 
-/* --- Estilos para la barra de navegación --- */
-
-/* Por defecto (Móvil): Ocultamos el menú de escritorio */
-.desktop-menu {
-  display: none;
+/* Reseteo básico y estilos generales del cuerpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
 }
 
-/* En pantallas de 768px o más (Tablets y Escritorio)... */
-@media (min-width: 768px) {
-  /* Mostramos el menú de escritorio */
-  .desktop-menu {
-    display: block;
-  }
+/* Contenedor principal de la barra de navegación */
+.navbar {
+    background-color: var(--navbar-bg);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-  /* Y ocultamos el menú de hamburguesa */
-  .mobile-menu {
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo del título o logo */
+.navbar-brand {
+    color: var(--navbar-text);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Oculta la lista de enlaces por defecto (Mobile First) */
+.navbar-links {
     display: none;
-  }
+}
 
-  
+.navbar-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Apila los enlaces verticalmente en móvil */
+    width: 100%;
+}
+
+.navbar-links li a {
+    color: var(--navbar-text);
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    background-color: var(--link-hover);
+}
+
+/* Estilos del botón de hamburguesa */
+.navbar-toggle {
+    display: none; /* El checkbox real está oculto */
+}
+
+.navbar-toggle-label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background-color: var(--navbar-text);
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
+
+/* Lógica para mostrar el menú al hacer clic en la hamburguesa */
+.navbar-toggle:checked ~ .navbar-links {
+    display: flex;
+    position: absolute;
+    top: 65px; /* Ajusta según el alto de tu navbar */
+    left: 0;
+    background-color: var(--navbar-bg);
+    width: 100%;
+}
+
+/* Animación de la hamburguesa a una 'X' */
+.navbar-toggle:checked ~ .navbar-toggle-label .hamburger {
+    background-color: transparent;
+}
+
+.navbar-toggle:checked ~ .navbar-toggle-label .hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle:checked ~ .navbar-toggle-label .hamburger::after {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Estilos para pantallas grandes (Desktop) */
+@media (min-width: 768px) {
+    /* Oculta la hamburguesa */
+    .navbar-toggle-label {
+        display: none;
+    }
+
+    /* Muestra los enlaces y los alinea horizontalmente */
+    .navbar-links {
+        display: flex;
+    }
+
+    .navbar-links ul {
+        flex-direction: row;
+        width: auto;
+    }
 }

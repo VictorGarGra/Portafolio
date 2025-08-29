@@ -1,31 +1,30 @@
-<mat-toolbar color="primary" class="mat-elevation-z6">
-  <span> <mat-icon>work</mat-icon>Portafolio</span>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header Responsivo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="navbar-brand">Portafolio</a>
 
-  <span class="spacer"></span>
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle" />
+        <label for="navbar-toggle" class="navbar-toggle-label">
+          <span class="hamburger"></span>
+        </label>
 
-  <div class="desktop-menu">
-    <a mat-button routerLink="/dash" fragment="Binevenida">Inicio</a>
-    <a mat-button routerLink="/dash" fragment="Proyectos">Proyectos</a>
-    <a mat-button routerLink="/dash" fragment="Acercade">Acerca de mí</a>
-    <a mat-button routerLink="/dash" fragment="Stack">Tecnologías</a>
-    <a mat-button routerLink="/dash" fragment="Redes">Contacto</a>
-
-    <a mat-button routerLink="/dash" fragment="Redes" color="accent">Mi CV</a>
-  </div>
-
-  <div class="mobile-menu">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <a mat-menu-item routerLink="/dash" fragment="Binevenida">Inicio</a>
-      <a mat-menu-item routerLink="/dash" fragment="Proyectos">Proyectos</a>
-      <a mat-menu-item routerLink="/dash" fragment="Acercade">Acerca de mí</a>
-      <a mat-menu-item routerLink="/dash" fragment="Stack">Tecnologías</a>
-      <a mat-menu-item routerLink="/dash" fragment="Redes">Contacto</a>
-      <a mat-menu-item routerLink="/dash" fragment="Redes">Mi Cv</a>
-    </mat-menu>
-  </div>
-</mat-toolbar>
-
-<router-outlet></router-outlet>
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#acerca-de">Acerca de mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>
